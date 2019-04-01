@@ -1,11 +1,9 @@
 {
   "name": "mooltycommons",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Outils JavaScript MooltyMedia",
-  "main": "lib/Core.js",
+  "main": "Core.js",
   "scripts": {
-    "compile": "babel --source-maps -d lib/ src/",
-    "prepublish": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/SpeedNeo/mooltycommons/issues"
   },
-  "homepage": "https://github.com/SpeedNeo/mooltycommons#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
-  }
+  "homepage": "https://github.com/SpeedNeo/mooltycommons#readme"
 }
