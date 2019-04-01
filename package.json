@@ -1,6 +1,6 @@
 {
   "name": "mooltycommons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Outils JavaScript MooltyMedia",
   "main": "lib/Core.js",
   "scripts": {
