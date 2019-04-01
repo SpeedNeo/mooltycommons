@@ -6,6 +6,4 @@ class Core {
   }
 }
 
-const core = new Core();
-
-export default core;
+export default new Core();
