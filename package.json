@@ -1,0 +1,19 @@
+{
+  "name": "mooltycommons",
+  "version": "1.0.0",
+  "description": "Outils JavaScript MooltyMedia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpeedNeo/mooltycommons.git"
+  },
+  "author": "Mathieu Colin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpeedNeo/mooltycommons/issues"
+  },
+  "homepage": "https://github.com/SpeedNeo/mooltycommons#readme"
+}
