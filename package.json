@@ -2,7 +2,7 @@
   "name": "mooltycommons",
   "version": "1.0.6",
   "description": "Outils JavaScript MooltyMedia",
-  "main": "src/Core.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
