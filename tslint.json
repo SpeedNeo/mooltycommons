@@ -1,8 +1,0 @@
-{
-  "extends": [ "tslint:latest", "tslint-react", "tslint-config-airbnb" ],
-  "rules": {
-    "member-access": false,
-    "no-implicit-dependencies": false,
-    "quotemark": false
-  }
-}
