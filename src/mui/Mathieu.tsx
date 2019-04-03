@@ -1,8 +1,5 @@
 import * as React from "react";
-
-interface MathieuProps {
-  message: string;
-}
+import { MathieuProps } from "./index";
 
 class Mathieu extends React.Component<MathieuProps> {
   render() {
