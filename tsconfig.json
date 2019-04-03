@@ -30,11 +30,7 @@
       "index.ts",
       "node_modules/@types"
     ],
-    "declaration": true,
-    "baseUrl": ".",
-    "paths": {
-      "lang-service/*": ["lang/*"]
-    }
+    "declaration": true
   },
   "include": ["src"]
 }

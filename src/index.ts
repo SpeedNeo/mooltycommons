@@ -1,1 +1,1 @@
-export * from "./lang/StringUtils";
+export * from "../dist/lang/StringUtils";
