@@ -2,9 +2,10 @@
   "name": "mooltycommons",
   "version": "1.0.8",
   "description": "Outils JavaScript MooltyMedia",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
   "scripts": {
-    "prepare": "tsc",
+    "prepare": "rd /s /q dist & tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

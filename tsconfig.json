@@ -18,7 +18,6 @@
       "esnext"
     ],
     "outDir": "dist",
-    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -30,7 +29,8 @@
     "typeRoots": [
       "index.ts",
       "node_modules/@types"
-    ]
+    ],
+    "declaration": true
   },
   "include": ["src"]
 }
