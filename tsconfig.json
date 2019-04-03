@@ -5,7 +5,7 @@
         "name": "typescript-tslint-plugin",
         "alwaysShowRuleFailuresAsWarnings": false,
         "ignoreDefinitionFiles": true,
-        "configFile": "../tslint.json",
+        "configFile": "tslint.json",
         "suppressWhileTypeErrorsPresent": false,
         "mockTypeScriptVersion": false
       }
@@ -30,7 +30,11 @@
       "index.ts",
       "node_modules/@types"
     ],
-    "declaration": true
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "lang-service/*": ["lang/*"]
+    }
   },
   "include": ["src"]
 }
