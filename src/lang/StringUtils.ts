@@ -3,7 +3,7 @@ class StringUtils {
 
   static stringNotEmpty = (str: string, strIfEmpty: string): string => (StringUtils.stringNotNull(str) === "" ? strIfEmpty : str);
 
-  static contains = (str: string, substring: string) => str.includes(substring);
+  static contains = (str: string, substring: string): boolean => str.includes(substring);
 
   static isNumber = (str: string): boolean => !isNaN(+str);
 }
