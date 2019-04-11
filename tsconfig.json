@@ -34,7 +34,10 @@
     "baseUrl": ".",
     "paths": {
       "@core/*": ["src/*"],
-      "@lang/*": ["src/lang/*"]
+      "@lang/*": ["src/lang/*"],
+      "@http/*": ["src/http/*"],
+      "@react/*": ["src/react/*"],
+      "@process/*": ["src/process/*"]
     }
   },
   "include": ["src"]
