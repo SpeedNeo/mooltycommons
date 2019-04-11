@@ -1,1 +1,1 @@
-export * from "./HttpClient";
+export { default as HttpClient } from "./HttpClient";

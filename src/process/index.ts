@@ -1,1 +1,1 @@
-export * from "./ProcessUtils";
+export { default as ProcessUtils } from "./ProcessUtils";
