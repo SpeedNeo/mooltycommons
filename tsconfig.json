@@ -24,7 +24,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "preserve",
     "typeRoots": [
       "index.ts",
       "node_modules/@types"
