@@ -1,6 +1,6 @@
 {
   "name": "mooltycommons",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Outils JavaScript MooltyMedia",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
@@ -36,6 +36,6 @@
   "files": [
     "dist",
     "index.js",
-    "index.d.js"
+    "index.d.ts"
   ]
 }
