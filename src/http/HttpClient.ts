@@ -1,5 +1,4 @@
-import Client from "@core/Client";
-import { ProcessUtils } from "@core/process";
+import Client from "../Client";
 
 const POST: string = "POST";
 const PUT: string = "PUT";

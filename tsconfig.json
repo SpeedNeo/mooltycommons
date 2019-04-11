@@ -29,15 +29,7 @@
       "index.ts",
       "node_modules/@types"
     ],
-    "declaration": true,
-    "baseUrl": ".",
-    "paths": {
-      "@core/*": ["src/*"],
-      "@lang/*": ["src/lang/*"],
-      "@http/*": ["src/http/*"],
-      "@react/*": ["src/react/*"],
-      "@process/*": ["src/process/*"]
-    }
+    "declaration": true
   },
   "include": ["src", "index.ts"]
 }
