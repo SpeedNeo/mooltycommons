@@ -1,15 +1,14 @@
 import Client from "@core/Client";
+import { ProcessUtils } from "@core/process";
 
-enum Method {
-  POST,
-  PUT
-}
+const POST: string = "POST";
+const PUT: string = "PUT";
 
-type FunctionSuccess = (json: object) => void;
+type FunctionSuccess<T> = (json: T) => void;
 type FunctionError = (error: string) => void;
 
 class HttpClient implements Client {
-  getResponseJson = (url: string, fctSuccess: FunctionSuccess = () => {}, fctError: FunctionError = () => {}): void => {
+  getResponseJson = <T>(url: string, fctSuccess: FunctionSuccess<T> = () => {}, fctError: FunctionError = () => {}): void => {
     fetch(url)
       .then((response: Response) => {
         if (response.ok) {
@@ -22,9 +21,9 @@ class HttpClient implements Client {
       .catch(error => fctError(error));
   }
 
-  methodJsonResponseJson = (method: Method, url: string, data: object, fctSuccess: FunctionSuccess, fctError: FunctionError): void => {
+  methodJsonResponseJson = <U, V>(method: string, url: string, data: U, fctSuccess: FunctionSuccess<V>, fctError: FunctionError): void => {
     fetch(url, {
-      method: Method[method],
+      method: method,
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json; charset=utf8"
@@ -42,9 +41,9 @@ class HttpClient implements Client {
       .catch(error => fctError(error));
   }
 
-  postJsonResponseJson = (url: string, data: object, fctSuccess: FunctionSuccess = () => {}, fctError: FunctionError = () => {}) => this.methodJsonResponseJson(Method.POST, url, data, fctSuccess, fctError);
+  postJsonResponseJson = <U, V>(url: string, data: U, fctSuccess: FunctionSuccess<V> = () => {}, fctError: FunctionError = () => {}) => this.methodJsonResponseJson(POST, url, data, fctSuccess, fctError);
 
-  putJsonResponseJson = (url: string, data: object, fctSuccess: FunctionSuccess = () => {}, fctError: FunctionError = () => {}) => this.methodJsonResponseJson(Method.PUT, url, data, fctSuccess, fctError);
+  putJsonResponseJson = <U, V>(url: string, data: U, fctSuccess: FunctionSuccess<V> = () => {}, fctError: FunctionError = () => {}) => this.methodJsonResponseJson(PUT, url, data, fctSuccess, fctError);
 
   shutDown = () => {};
 }
