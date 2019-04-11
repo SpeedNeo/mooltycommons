@@ -39,5 +39,5 @@
       "@process/*": ["src/process/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "index.ts"]
 }
