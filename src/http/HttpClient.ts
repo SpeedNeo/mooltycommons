@@ -3,8 +3,12 @@ import Client from "../Client";
 const POST: string = "POST";
 const PUT: string = "PUT";
 
+interface ErrorResponse {
+  response: Response;
+}
+
 type FunctionSuccess<T> = (json: T) => void;
-type FunctionError = (error: string) => void;
+type FunctionError = (error: ErrorResponse) => void;
 
 class HttpClient implements Client {
   getResponseJson = <T>(url: string, fctSuccess: FunctionSuccess<T> = () => {}, fctError: FunctionError = () => {}): void => {
@@ -13,11 +17,9 @@ class HttpClient implements Client {
         if (response.ok) {
           return response.json();
         }
-
-        throw new Error(response.statusText);
       })
       .then(json => fctSuccess(json))
-      .catch(error => fctError(error));
+      .catch((error: ErrorResponse) => fctError(error));
   }
 
   methodJsonResponseJson = <U, V>(method: string, url: string, data: U, fctSuccess: FunctionSuccess<V>, fctError: FunctionError): void => {
