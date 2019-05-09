@@ -53,6 +53,17 @@ class HttpClient implements Client {
 
   putJsonResponseJson = <U, V>(url: string, data: U, fctResponse: FunctionResponse = () => {}, fctSuccess: FunctionSuccess<V> = () => {}, fctError: FunctionError = () => {}) => this.methodJsonResponseJson(PUT, url, data, fctResponse, fctSuccess, fctError);
 
+  download = (url: string) => {
+    const elementA = document.createElement("a");
+    elementA.style.display = "none";
+    elementA.href = url;
+    elementA.target = "_blank";
+    document.body.appendChild(elementA);
+    elementA.click();
+    document.body.removeChild(elementA);
+    window.URL.revokeObjectURL(url);
+  }
+
   shutDown = () => {};
 }
 
